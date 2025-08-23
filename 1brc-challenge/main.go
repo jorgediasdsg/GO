@@ -1,6 +1,11 @@
 package main
 
-import "os"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
 
 type Measurement struct {
 	Name  string
@@ -17,4 +22,12 @@ func main() {
 	}
 	defer measurements.Close()
 
+	scanner := bufio.NewScanner(measurements)
+	for scanner.Scan() {
+		rawData := scanner.Text()
+		semicolon := strings.Index(rawData, ";")
+		location := rawData[:semicolon]
+		temp := rawData[semicolon+1:]
+		fmt.Println(location, temp)
+	}
 }
