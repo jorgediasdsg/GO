@@ -7,6 +7,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Measurement struct {
@@ -17,6 +18,7 @@ type Measurement struct {
 }
 
 func main() {
+	start := time.Now()
 	measurements, err := os.Open("measurements.txt")
 	if err != nil {
 		panic(err)
@@ -69,4 +71,5 @@ func main() {
 		fmt.Printf("'%s=%.1f/%.1f/%.1f', ", name, measurements.Min, avg, measurements.Max)
 	}
 	fmt.Printf("}\n")
+	fmt.Printf("Execution time: %s\n", time.Since(start))
 }
