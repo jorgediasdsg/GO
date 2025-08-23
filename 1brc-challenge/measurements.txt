@@ -1,18 +1,18 @@
-Florianópolis = -27.5
-São_Paulo = -23.5
-Rio_de_Janeiro = -22.9
-Belo_Horizonte = -19.9
-Salvador = -12.9
-Recife = -8.1
-Fortaleza = -3.7
-Natal = -5.8
-João_Pessoa = -7.1
-Maceió = -9.7
-Florianópolis = -32.9
-São_Paulo = -46.6
-Rio_de_Janeiro = -43.2
-Belo_Horizonte = -40.3
-Salvador = -38.6
-Recife = -35.7
-Fortaleza = -34.0
-Natal = -33.5
+Florianópolis;-27.5
+São_Paulo;-23.5
+Rio_de_Janeiro;-22.9
+Belo_Horizonte;-19.9
+Salvador;-12.9
+Recife;-8.1
+Fortaleza;-3.7
+Natal;-5.8
+João_Pessoa;-7.1
+Maceió;-9.7
+Florianópolis;-32.9
+São_Paulo;-46.6
+Rio_de_Janeiro;-43.2
+Belo_Horizonte;-40.3
+Salvador;-38.6
+Recife;-35.7
+Fortaleza;-34.0
+Natal;-33.5
