@@ -14,7 +14,7 @@
  <a href="#expected-output">Saída Esperada</a> •
  <a href="#code-notes">Notas de Código</a> •
  <a href="#perf-notes">Dicas de Performance</a> •
- <a href="#next-steps">Próximos Passos</a>
+ <a href="#next-steps">Benchmarks de Execução</a>
 </p>
 
 ---
@@ -120,12 +120,15 @@ Disco: prefira SSD NVMe; o gargalo geralmente é I/O.
 Formato de entrada: manter linhas curtas acelera Scanner.
 Mapas: se o número de localidades for conhecido/estimado, faça make(map[string]Measurement, N) para evitar rehash inicial.
 
-<h1 id="next-steps">:rocket: Próximos Passos</h1>
-Exportar resultados em JSON/CSV além do stdout.
-Adicionar -input e -output via flag.
-Registrar métricas (linhas/s, MB/s, linhas inválidas).
-Paralelizar parsing se a origem vier de múltiplos arquivos.
-Testes de benchmark com arquivos de 10M / 100M / 1B.
+<h1 id="next-steps">:stopwatch: Benchmarks de Execução</h1>
+
+| Versão   | Descrição                                                                                                                                          | Tempo            | Commit                                                                                       |
+|----------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------------------------------|
+| Versão 1 | Teste com o exemplo da Rocketseat                                                                                                                  | 2m24.23696897s   | [40454f0](https://github.com/jorgediasdsg/GO/commit/40454f0ec5aa576b7e994f2a74199a0642293b2f) |
+| Versão 2 | Adicionado multi-thread direto, o tempo aumentou                                                                                                   | 8m57.803627255s  | [fd1edb0](https://github.com/jorgediasdsg/GO/commit/fd1edb095ccda1fc5d9061925346209eda26b7a1) |
+| Versão 3 | Utilizado projeto de estudo da **shraddhaag**, trocando leitura linha a linha (overhead) por chunks, aproveitando melhor a memória bloqueada       | 26.98176896s     | [29f1fd6](https://github.com/jorgediasdsg/GO/commit/29f1fd6d91e45c7db6686678f44810aaf5e753ff) |
+
+Utilizei neste projeto apoio de IA com ChatGPT e Gemini para entender melhor os fluxos da linguagem GO para facilitar meu aprendizado.
 
 <p align="center"> <sub>@jorgediasdsg — 2025</sub> </p> 
 
