@@ -1,3 +1,7 @@
+// Version 1.0 - 2025-08-23
+// Execution time: 2m24.23696897s
+// with optimizations
+
 package main
 
 import (
@@ -19,11 +23,19 @@ type Measurement struct {
 
 func main() {
 	start := time.Now()
-	measurements, err := os.Open("measurements.txt")
+	measurements, err := os.Open("../../measurements.txt")
 	if err != nil {
 		panic(err)
 	}
 	defer measurements.Close()
+
+	// read size of the file
+	fileInfo, err := measurements.Stat()
+	if err != nil {
+		panic(err)
+	}
+	size := fileInfo.Size()
+	fmt.Printf("Proccess file size: %d GB\n", size/1024/1024/1024)
 
 	data := make(map[string]Measurement)
 
