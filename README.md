@@ -63,6 +63,7 @@ python3 create.py 1_000_000_000
 
 <h1 id="how-to-run">:computer: Como Executar</h1>
 1) Rodar direto com go run
+
 ```shell
 # Certifique-se de que measurements.txt está no mesmo diretório de main.go
 go run main.go
