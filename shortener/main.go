@@ -26,7 +26,8 @@ func main() {
 }
 
 func run() error {
-	handler := api.NewHandler()
+	db := make(map[string]string) // In-memory storage
+	handler := api.NewHandler(db)
 
 	s := http.Server{
 		ReadTimeout:  10 * time.Second,
