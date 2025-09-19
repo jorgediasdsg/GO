@@ -367,5 +367,6 @@ func customStringToIntParser(input string) (output int64) {
 	if isNegativeNumber {
 		return -output
 	}
+	// teste de código
 	return
 }
