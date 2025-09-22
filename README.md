@@ -1,4 +1,4 @@
-:zap: Projetos em Go — Estudo e Desempenho :zap:
+<h1>:zap: Projetos em Go — Estudo e Desempenho :zap:</h1>
 
 *:us:* Three Go study projects: one focused on high-performance data processing (1B lines), one on building a URL shortener API, and another on creating a simple in-memory record management API [3].
 
