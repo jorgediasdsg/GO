@@ -24,4 +24,4 @@ Uma API REST simples em Go para cadastrar, consultar, modificar e deletar um reg
 
 ---
 
-Feito com :heart: por [@jorge](https://github.com/jorgediasdsg)
+Feito por [@jorge](https://github.com/jorgediasdsg)
