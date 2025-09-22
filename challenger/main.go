@@ -1,0 +1,37 @@
+package main
+
+import (
+	"challenger/api"
+	"log/slog"
+	"net/http"
+	"os"
+	"time"
+)
+
+func main() {
+	if err := run(); err != nil {
+		slog.Error("Error running the service", "error", err)
+		os.Exit(1)
+	}
+	slog.Info("All system offline")
+
+}
+
+func run() error {
+	db := make(map[string]string) // In-memory storage
+	handler := api.NewHandler(db)
+
+	s := http.Server{
+		ReadTimeout:  10 * time.Second,
+		WriteTimeout: 10 * time.Second,
+		IdleTimeout:  120 * time.Second,
+		Addr:         ":8080",
+		Handler:      handler,
+	}
+
+	slog.Info("Starting server on :8080")
+	if err := s.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		return err
+	}
+	return nil
+}
